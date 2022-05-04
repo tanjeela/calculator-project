@@ -5,34 +5,36 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="calculator-project.css">
-  <link rel="javascript" href="calculator-project.js">
+  <script defer src="calculator-project.js"></script>
   <title>Calculator Project</title>
 </head>
 <body>
-  <!-- created a div to target calculator container -->
+  <!-- created a div to target calculator container --> 
 <div class="calculator">
   <!-- Display for answers -->
-  <div class="calculator__display">ANSWER</div>
+  <div class="calculator__display"><div id="display-output"></div>
+
+  </div>
 
   <div class="calculator__buttons">
-    <button class="buttons">7</button>
-    <button class="buttons">8</button>
-    <button class="buttons">9</button>
-    <button class="buttons buttons__operator buttons__operator--blue">÷</button>
-    <button class="buttons">4</button>
-    <button class="buttons">5</button>
-    <button class="buttons">6</button>
-    <button class="buttons buttons__operator buttons__operator--blue">x</button>
-    <button class="buttons">1</button>
-    <button class="buttons">2</button>
-    <button class="buttons">3</button>
-    <button class="buttons buttons__operator buttons__operator--blue">-</button>
-    <button class="buttons">0</button>
-    <button class="buttons">.</button>
-    <button class="buttons buttons__operator buttons__operator--equal">=</button>
-    <button class="buttons buttons__operator buttons__operator--blue">+</button>
-    <button class="buttons buttons__operator buttons__operator--yellow">DEL</button>
-    <button class="buttons buttons__operator buttons__operator--yellow">AC</button>
+    <button class="buttons" id="buttonNum7">7</button>
+    <button class="buttons" id="buttonNum8">8</button>
+    <button class="buttons" id="buttonNum9">9</button>
+    <button class="buttons buttons__operator buttons__operator--blue" id="buttonDivision">÷</button>
+    <button class="buttons" id="buttonNum4">4</button>
+    <button class="buttons" id="buttonNum5">5</button>
+    <button class="buttons" id="buttonNum6">6</button>
+    <button class="buttons buttons__operator buttons__operator--blue" id="buttonMultiplication">x</button>
+    <button class="buttons" id="buttonNum1">1</button>
+    <button class="buttons" id="buttonNum2">2</button>
+    <button class="buttons" id="buttonNum3">3</button>
+    <button class="buttons buttons__operator buttons__operator--blue" id="buttonSubtract">-</button>
+    <button class="buttons" id="buttonNum0">0</button>
+    <button class="buttons" id="buttonDecimal">.</button>
+    <button class="buttons buttons__operator--equal" id="buttonEqual">=</button>
+    <button class="buttons buttons__operator buttons__operator--blue" id="buttonAddition">+</button>
+    <button class="buttons buttons__operator--yellow" id="buttonBackspace">DEL</button>
+    <button class="buttons buttons__operator--yellow" id="buttonAutoClear">AC</button>
   
 </div>
 
@@ -40,23 +42,3 @@
 </body>
 </html>
 
- <!-- <div class="button">7</div>
-    <div class="button">8</div>
-    <div class="button">9</div>
-    <div class="button">÷</div> -->
-
-
-    <!-- <div class="button">4</div>
-    <div class="button">5</div>
-    <div class="button">6</div>
-    <div class="button">x</div>
-    <div class="button">1</div>
-    <div class="button">2</div>
-    <div class="button">3</div>
-    <div class="button">-</div>
-    <div class="button">0</div>
-    <div class="button">.</div>
-    <div class="button">=</div>
-    <div class="button button__column--blue">+</div>
-    <div class="button button__display--DEL">DEL</div>
-    <div class="button button__display--clear">AC</div> -->
