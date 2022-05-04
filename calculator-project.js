@@ -68,7 +68,8 @@ const clear = () => {
  operator = "";
  display.textContent = displayValue;;
 }
-// THIS PART AIN'T WORKING FML
+// THIS PART AIN'T WORKING FML 
+// TRY USING SWITCH STATEMENT!!!!!!!!!!!
 document.querySelectorAll('.buttons__operator').forEach(item => {
   item.addEventListener('click', event => {
     storageValue1.push(currentNumber);
