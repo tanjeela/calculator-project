@@ -9,9 +9,8 @@ let currentNumber = "";
 let previousNumber = ""
 let operator = "";
 let displayValue ="0";
-const storageValue1 = [];
-const storageValue2 = [];
 let result = "";
+
 // Start on display
 const display = document.querySelector('#display-output')
 
@@ -28,13 +27,17 @@ const displayNumber =(i) => {
     currentNumber += i;
     display.textContent = currentNumber;
 }
+// keeps track of operator
+// move current to previous number
+// equal current number nothing
 
 const inputOperator = (n) => {
   if (operator.length >= 1) 
   return; 
-  operator += n; 
+  operator = n; 
   display.textContent = operator;
-
+  currentNumber = previousNumber;
+  previousNumber = "";
 }
 
 // Operatorationzzzz//////
@@ -54,7 +57,6 @@ multiplication.addEventListener('click', () => inputOperator("*"));
 const subtraction = document.getElementById("buttonSubtract");
 subtraction.addEventListener('click', () => inputOperator("-"));
 
-
 //Addition
 const addition = document.getElementById("buttonAddition");   
 addition.addEventListener('click', () => inputOperator("+"));
@@ -69,33 +71,27 @@ const clear = () => {
  display.textContent = displayValue;;
 }
 // THIS PART AIN'T WORKING FML 
-// TRY USING SWITCH STATEMENT!!!!!!!!!!!
-document.querySelectorAll('.buttons__operator').forEach(item => {
-  item.addEventListener('click', event => {
-    storageValue1.push(currentNumber);
-    currentNumber = "" })
   
 const buttonEqual = document.getElementById("buttonEqual");
 
 buttonEqual.addEventListener('click', event => {
-  storageValue2.push(currentNumber); 
-  
+
   if (operator === "+") {
-    result = (parseInt(currentNumber)+(parseInt(storageValue2)))
+    result = (parseInt(currentNumber)+(parseInt(previousNumber)));
     display(result);
   } else if (operator === "-") {
-    result = ((parseInt(storageValue1))-(parseInt(storageValue2)));
-        display(result);
+    result = ((parseInt(currentNumber))-(parseInt(previousNumber)));
+    display(result);
   } else if (operator === "÷") {
-    result = parseInt(storageValue1)/(parseInt(storageValue2));
+    result = parseInt(currentNumber)/(parseInt(previousNumber));
     display(result);
   } else if (operator === "x") {
-    result = parseInt(storageValue1)*(parseInt(storageValue2))
+    result = parseInt(currentNumber)*(parseInt(previousNumber))
     display(result);
   } 
 })
 
-}
 
 
-)
+
+
