@@ -1,15 +1,8 @@
-// decimal point needs to work
-// textContent gets the content of all elements, including <script> and <style> elements.
-
-// Locating keys and connecting the buttons
-// Created Array of Number Buttons
-
 let currentNumber = ""; //RESETS AS AN EMPTY STRING
 let previousNumber = "";
 let operator = "";
 let displayValue ="";
 
-//  returns the first Element within the document that matches the specified selector, or group of selectors
 const display = document.querySelector('#display-output');
 
 const operators = document.querySelectorAll(".buttons__operator");
@@ -35,7 +28,7 @@ const inputOperator = (n) => {
   currentNumber = "";
 }
 
-// Operatorationzzzz//////
+// Operatorations
 
 //Division
 const division = document.getElementById("buttonDivision");
@@ -63,8 +56,7 @@ const clear = () => {
 }
 
 // Decimal Button
-// Aidens instructions --> create a function for decimal and make it so that it doesn't repeat and connects to the display
-// 
+
 const decimal = document.getElementById("buttonDecimal");
 decimal.addEventListener('click', () => inputDecimalButton("."));
 const inputDecimalButton = (i) => {
@@ -75,7 +67,6 @@ const inputDecimalButton = (i) => {
 const buttonEqual = document.getElementById("buttonEqual");   
 buttonEqual.addEventListener('click', () =>equals(previousNumber, operator, currentNumber));
 
-// WORKING WOOO
 
 const equals = (previousNumber, operator, currentNumber) => {
   // The parseFloat() function parses an argument (converting it to a string first if needed) and returns a floating point number.
